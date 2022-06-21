@@ -8,10 +8,32 @@
     <!-- <link rel="stylesheet" href="index.css" /> -->
   <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
   <body>
-    <main>
+    <header>
       <h1>
         Leaderboard
       </h1>
+    </header>
+    <main>
+      <div class="recent-scores">
+        <h2>
+          Recent Scores
+        </h2>
+        <button type="button" class="refresh">
+          Refresh
+        </button>
+        <ul class="leaderboard" id="leaderboard">          
+        </ul>
+      </div>
+      <form action="#" id="form-add-new">
+        <h2>
+          Add Your Score
+        </h2>
+        <input type="text" name="name" id="name" class="form-input" placeholder="Your Name: e.g. Tom" required><br>
+        <input type="number" name="score" id="score" class="form-input" placeholder="Your Score: e.g. 45" required><br>
+        <button type="submit" class="btn-submit" id="btn-submit">
+          Submit
+        </button>
+      </form>
     </main>
   </body>
 </html>
