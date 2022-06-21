@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px 30px;
+}
+
+main,
+.recent-scores,
+form {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 15px;
+}
+
+button {
+  padding: 8px;
+}
+
+main {
+  width: 80%;
+  padding: 30px 10px;
+}
+
+.recent-scores,
+form {
+  width: 45%;
+  padding: 10px 20px;
+}
+
+.leaderboard {
+  list-style: none;
+  border: 2px solid #000;
+}
+
+.leaderboard,
+.form-input,
+.leaders {
+  width: 100%;
+}
+
+.form-input,
+.leaders {
+  padding: 12px;
+}
+
+.leaders:nth-child(even) {
+  background-color: #dfdfdf;
+}
+
+.btn-submit {
+  margin-right: 0;
+  margin-left: auto;
+}
