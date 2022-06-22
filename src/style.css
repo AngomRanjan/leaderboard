@@ -8,6 +8,38 @@ header {
   padding: 20px 30px;
 }
 
+body {
+  /* background-color: black;
+  background-image:
+    radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; */
+  background:
+    linear-gradient(135deg, #eceddc 25%, transparent 25%),
+    linear-gradient(225deg, #eceddc 25%, transparent 25%),
+    linear-gradient(315deg, #eceddc 25%, transparent 25%),
+    linear-gradient(45deg, #eceddc 25%, transparent 25%);
+  background-size: 100vh 100vh;
+  background-color: #db5551;
+}
+
+h1 {
+  font-size: 50px;
+  background-image: linear-gradient(90deg, #4c4ff0, #000103);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 24px;
+  background-image: linear-gradient(60deg, #fffbfb, #f8a4a4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 main,
 .recent-scores,
 form {
@@ -20,6 +52,8 @@ form {
 
 button {
   padding: 8px;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 main {
@@ -35,9 +69,11 @@ form {
 
 .leaderboard {
   list-style: none;
-  border: 2px solid #000;
   max-height: 50vh;
   overflow-y: auto;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 5px rgba(168, 166, 166, 0.9);
+  background-color: #fff;
 }
 
 .leaderboard,
