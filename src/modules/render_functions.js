@@ -1,30 +1,38 @@
-const appendLeaderboardUl = (name, score) => {
+import { loadLeaderBoard, postNewScore } from './api_manager.js';
+
+const populateLeaderBoard = (leaders) => {
   const ulLeaderboard = document.getElementById('leaderboard');
-  const liLeaders = document.createElement('li');
-  liLeaders.className = 'leaders';
-  liLeaders.textContent = `${name}: ${score}`;
-  ulLeaderboard.appendChild(liLeaders);
+  ulLeaderboard.innerHTML = '';
+  leaders.forEach((leader) => {
+    const liLeaders = document.createElement('li');
+    liLeaders.className = 'leaders';
+    liLeaders.textContent = `${leader.user}: ${leader.score}`;
+    ulLeaderboard.appendChild(liLeaders);
+  });
 };
 
-const leaders = [
-  {
-    name: 'Tomba',
-    score: 45,
-  },
-  {
-    name: 'Chaoba',
-    score: 76,
-  },
-  {
-    name: 'Yaima',
-    score: 60,
-  },
-];
+const formAddNewSubmit = (e) => {
+  e.preventDefault();
+  const scoreData = {
+    user: document.getElementById('username').value,
+    score: document.getElementById('score').value,
+  };
+  postNewScore(scoreData);
+  document.getElementById('form-add-new').reset();
+  e.stopPropagation();
+};
 
-const renderUI = () => {
-  leaders.forEach((leader) => {
-    appendLeaderboardUl(leader.name, leader.score);
-  });
+const btnRefreshClick = (e) => {
+  loadLeaderBoard(populateLeaderBoard);
+  e.stopPropagation();
+};
+
+const renderUI = async () => {
+  loadLeaderBoard(populateLeaderBoard);
+  const btnRefresh = document.getElementById('btn-refresh');
+  const formAddNew = document.getElementById('form-add-new');
+  btnRefresh.addEventListener('click', btnRefreshClick);
+  formAddNew.addEventListener('submit', formAddNewSubmit);
 };
 
 export default renderUI;

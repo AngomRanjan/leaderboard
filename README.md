@@ -15,7 +15,7 @@
 ## Live Demo
 [source code](git@github.com:AngomRanjan/leaderboard.git)
 
-[Live Demo Link](https://angomranjan.github.io/leaderboard/dist/index.html)
+[Live Demo Link](https://angomranjan.github.io/leaderboard/)
 
 ## Authors
 
@@ -35,7 +35,15 @@ Feel free to check the [issues page](https://github.com/AngomRanjan/leaderboard/
 
 Give a [⭐️](https://github.com/AngomRanjan/leaderboard/stargazers) if you like this project!
 
-![](https://img.shields.io/twitter/follow/RanjanAngom?style=social)
+## :footprints: Track Me
+
+<a href="https://twitter.com/RanjanAngom?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">
+<img src="https://img.shields.io/badge/-@RanjanAngom-blue?style=flat&logo=twitter&logoColor=white">
+</a>
+
+<a class="github-button" href="https://github.com/AngomRanjan" aria-label="Follow @AngomRanjan on GitHub">
+ <img src="https://img.shields.io/badge/-@AngomRanjan-green?style=flat&logo=github&logoColor=white">
+</a>
 
 ## Acknowledgments
 - Microverse Team
