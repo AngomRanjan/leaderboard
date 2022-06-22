@@ -18,6 +18,7 @@ const formAddNewSubmit = (e) => {
     score: document.getElementById('score').value,
   };
   postNewScore(scoreData);
+  document.getElementById('form-add-new').reset();
   e.stopPropagation();
 };
 
