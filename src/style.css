@@ -37,7 +37,7 @@ form {
   list-style: none;
   border: 2px solid #000;
   max-height: 50vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .leaderboard,

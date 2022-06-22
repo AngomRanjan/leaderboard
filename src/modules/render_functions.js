@@ -1,7 +1,8 @@
-import loadLeaderBoard from './api_manager.js';
+import { loadLeaderBoard, postNewScore } from './api_manager.js';
 
 const populateLeaderBoard = (leaders) => {
   const ulLeaderboard = document.getElementById('leaderboard');
+  ulLeaderboard.innerHTML = '';
   leaders.forEach((leader) => {
     const liLeaders = document.createElement('li');
     liLeaders.className = 'leaders';
@@ -12,9 +13,11 @@ const populateLeaderBoard = (leaders) => {
 
 const formAddNewSubmit = (e) => {
   e.preventDefault();
-  const name = document.getElementById('username').value;
-  const mScore = document.getElementById('score').value;
-  console.log(`name: ${name} score: ${mScore}`);
+  const scoreData = {
+    user: document.getElementById('username').value,
+    score: document.getElementById('score').value,
+  };
+  postNewScore(scoreData);
   e.stopPropagation();
 };
 
